@@ -62,18 +62,3 @@ class NaiveBayesClassifier(HateSpeechClassifier):
                 solu[i] = 1
         return solu
 
-
-def sigmoid(x):
-    if x >= 0:
-        z = math.exp(-x)
-        sig = 1 / (1 + z)
-        return sig
-    else:
-        z = math.exp(x)
-        sig = z / (1 + z)
-        return sig
-
-
-class BonusClassifier(NaiveBayesClassifier):
-    def __init__(self):
-        super().__init__()
